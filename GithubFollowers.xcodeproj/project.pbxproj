@@ -12,6 +12,8 @@
 		D62DD02925CB5AD300E36467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DD02825CB5AD300E36467 /* ViewController.swift */; };
 		D62DD02E25CB5AD400E36467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62DD02D25CB5AD400E36467 /* Assets.xcassets */; };
 		D62DD03125CB5AD400E36467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62DD02F25CB5AD400E36467 /* LaunchScreen.storyboard */; };
+		D6418CC325CF3F8400EC96AB /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6418CC225CF3F8400EC96AB /* SearchVC.swift */; };
+		D6418CC625CF3FB000EC96AB /* FavoriteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6418CC525CF3FB000EC96AB /* FavoriteListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D62DD02D25CB5AD400E36467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D62DD03025CB5AD400E36467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D62DD03225CB5AD400E36467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6418CC225CF3F8400EC96AB /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		D6418CC525CF3FB000EC96AB /* FavoriteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				D62DD02425CB5AD300E36467 /* AppDelegate.swift */,
 				D62DD02625CB5AD300E36467 /* SceneDelegate.swift */,
 				D62DD02825CB5AD300E36467 /* ViewController.swift */,
+				D6418CC225CF3F8400EC96AB /* SearchVC.swift */,
+				D6418CC525CF3FB000EC96AB /* FavoriteListVC.swift */,
 				D62DD02D25CB5AD400E36467 /* Assets.xcassets */,
 				D62DD02F25CB5AD400E36467 /* LaunchScreen.storyboard */,
 				D62DD03225CB5AD400E36467 /* Info.plist */,
@@ -133,6 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6418CC325CF3F8400EC96AB /* SearchVC.swift in Sources */,
+				D6418CC625CF3FB000EC96AB /* FavoriteListVC.swift in Sources */,
 				D62DD02925CB5AD300E36467 /* ViewController.swift in Sources */,
 				D62DD02525CB5AD300E36467 /* AppDelegate.swift in Sources */,
 				D62DD02725CB5AD300E36467 /* SceneDelegate.swift in Sources */,
