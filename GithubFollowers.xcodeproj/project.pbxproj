@@ -17,6 +17,7 @@
 		D659A74C25D2FBE7008CF007 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D659A74B25D2FBE7008CF007 /* FollowerListVC.swift */; };
 		D685FC5125D03967001E3BEE /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685FC5025D03967001E3BEE /* GFButton.swift */; };
 		D68F097C25D0744000AEB59B /* GFTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68F097B25D0744000AEB59B /* GFTextfield.swift */; };
+		D693DAE925D499890008FD48 /* GFTitleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D693DAE825D499890008FD48 /* GFTitleTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D659A74B25D2FBE7008CF007 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		D685FC5025D03967001E3BEE /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		D68F097B25D0744000AEB59B /* GFTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextfield.swift; sourceTree = "<group>"; };
+		D693DAE825D499890008FD48 /* GFTitleTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				D68F097B25D0744000AEB59B /* GFTextfield.swift */,
 				D62DD02825CB5AD300E36467 /* ViewController.swift */,
 				D6418CC225CF3F8400EC96AB /* SearchVC.swift */,
+				D693DAE825D499890008FD48 /* GFTitleTable.swift */,
 				D6418CC525CF3FB000EC96AB /* FavoriteListVC.swift */,
 				D62DD02D25CB5AD400E36467 /* Assets.xcassets */,
 				D62DD02F25CB5AD400E36467 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				D68F097C25D0744000AEB59B /* GFTextfield.swift in Sources */,
 				D685FC5125D03967001E3BEE /* GFButton.swift in Sources */,
 				D62DD02925CB5AD300E36467 /* ViewController.swift in Sources */,
+				D693DAE925D499890008FD48 /* GFTitleTable.swift in Sources */,
 				D62DD02525CB5AD300E36467 /* AppDelegate.swift in Sources */,
 				D659A74C25D2FBE7008CF007 /* FollowerListVC.swift in Sources */,
 				D62DD02725CB5AD300E36467 /* SceneDelegate.swift in Sources */,
