@@ -29,7 +29,7 @@ class GFTitleTable: UILabel {
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
-        translatesAutoresizingMaskIntoConstraints = false1
+        translatesAutoresizingMaskIntoConstraints = false
         
         
     }
