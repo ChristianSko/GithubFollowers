@@ -95,7 +95,6 @@
 			children = (
 				D6611AD325D7F06B00DE0BB6 /* Follower.swift */,
 				D6611AD725D7F14800DE0BB6 /* User.swift */,
-				D6E9FB1E25DA9E7600E01FA9 /* NetworkManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +151,7 @@
 		D6E9FB1D25DA9DCA00E01FA9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				D6E9FB1E25DA9E7600E01FA9 /* NetworkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
