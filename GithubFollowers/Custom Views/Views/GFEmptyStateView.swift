@@ -17,6 +17,12 @@ class GFEmptyStateView: UIImageView {
         configure()
     }
     
+    init(message: String) {
+        super.init(frame: .zero)
+        messageLabel.text = message
+        configure()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -39,8 +45,8 @@ class GFEmptyStateView: UIImageView {
             
             logoImageImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
             logoImageImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
-            logoImageImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 200),
-            logoImageImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 140)
+            logoImageImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 170),
+            logoImageImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 40)
             
         ])
     }
