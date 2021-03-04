@@ -25,10 +25,11 @@ class FollowerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
+        configureSearchController()
         configureCollectionView()
         getFollowers(username: username, page: page)
         configureDataSource()
-        configureSearchController()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -126,7 +127,7 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
         updateDate(on: filterFollowers)
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("cancel")
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        updateDate(on: followers)
     }
 }
