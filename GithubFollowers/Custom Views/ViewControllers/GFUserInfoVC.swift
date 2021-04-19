@@ -31,11 +31,20 @@ class GFUserInfoVC: UIViewController {
         super.viewDidLoad()
         addSubViews()
         layoutUI()
+        configureUIElements()
     }
     
     
     func configureUIElements() {
         avatarImageView.downloadImage(from: user.avatarUrl)
+        userNameLabel.text          = user.login
+        nameLabel.text              = user.name ?? ""
+        locationLabel.text          = user.location ?? "No Location"
+        bioLabel.text               = user.bio ?? "No bio available"
+        bioLabel.numberOfLines      = 3
+        
+        locationImageView.image     = UIImage(systemName: SFSymbols.location)
+        locationImageView.tintColor = .secondaryLabel
     }
     
     func addSubViews() {
