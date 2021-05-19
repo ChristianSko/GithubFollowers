@@ -9,8 +9,8 @@ import UIKit
 
 
 protocol UserInfoVCDelegate: AnyObject {
-    func didTapGitHubProfile()
-    func didTapGetFollowers()
+    func didTapGitHubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
 }
 
 class UserInfoVC: UIViewController {
@@ -23,6 +23,7 @@ class UserInfoVC: UIViewController {
     var itemViews: [UIView] = []
     
     var username: String!
+    var delegate: FollowerListVCDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,14 +113,17 @@ class UserInfoVC: UIViewController {
 
 
 extension UserInfoVC: UserInfoVCDelegate {
-    func didTapGitHubProfile() {
-        //show safari view controller 
-        print("My button was tapped!!!!")
+    func didTapGitHubProfile(for user: User) {
+        guard let url = URL(string: user.htmlUrl) else {
+            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "Ok")
+            return
+        }
+        presentSafariVC(with: url)
     }
     
-    func didTapGetFollowers() {
-        //dismissVC
-        // tell follower list screen the new user
+    func didTapGetFollowers(for user: User) {
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
     
 }
