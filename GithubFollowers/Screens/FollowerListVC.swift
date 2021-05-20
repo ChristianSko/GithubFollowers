@@ -34,12 +34,19 @@ class FollowerListVC: UIViewController {
         configureCollectionView()
         getFollowers(username: username, page: page)
         configureDataSource()
-        
+        configureAddButton()
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    func configureAddButton() {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
+
     }
     
     func configureViewController() {
@@ -103,6 +110,10 @@ class FollowerListVC: UIViewController {
         snapshot.appendItems(followers)
         DispatchQueue.main.async {self.dataSource.apply(snapshot, animatingDifferences: true)}
         
+    }
+    
+    @objc func addButtonTapped() {
+        print("Adding User to Favorites")
     }
 }
 
