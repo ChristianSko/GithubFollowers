@@ -191,7 +191,6 @@
 				D6CECE2525EDA39D00908064 /* TexFields */,
 				D6CECE2425EDA37F00908064 /* Views */,
 				D62112AE25DE6C4D00C0904F /* Cells */,
-				D62112B225DE6E7300C0904F /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -221,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				D6CECE2925EDA43500908064 /* GFEmptyStateView.swift */,
+				D62112B225DE6E7300C0904F /* GFAvatarImageView.swift */,
 				D6B464D12630D366009C38BF /* GFItemInfoView.swift */,
 			);
 			path = Views;
