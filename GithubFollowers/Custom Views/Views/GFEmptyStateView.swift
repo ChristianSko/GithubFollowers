@@ -11,7 +11,7 @@ class GFEmptyStateView: UIImageView {
     
     let messageLabel = GFTitleLabel(textAlignment: .center, fontSize: 28)
     let logoImageView = UIImageView()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -27,19 +27,31 @@ class GFEmptyStateView: UIImageView {
     }
     
     private func configure() {
-        addSubview(messageLabel)
-        addSubview(logoImageView)
+        configureMessageLabel()
+        configureLogoImageView()
         
+    }
+    
+    private func configureMessageLabel(){
+        addSubview(messageLabel)
         messageLabel.numberOfLines = 3
         messageLabel.textColor     = .secondaryLabel
-        
-        logoImageView.image   = Images.emptyStateLogo
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
         let centerYConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? -90 : -150
         let messageLabelCenterYConstraint = messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerYConstant)
         messageLabelCenterYConstraint.isActive = true
         
+        NSLayoutConstraint.activate([
+            messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
+            messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+            messageLabel.heightAnchor.constraint(equalToConstant: 200)
+        ])
+    }
+    
+    private func configureLogoImageView() {
+        addSubview(logoImageView)
+        logoImageView.image   = Images.emptyStateLogo
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
         let logoBottomConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 80 : 40
         let logoImageViewBottomConstraint = logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: logoBottomConstant)
