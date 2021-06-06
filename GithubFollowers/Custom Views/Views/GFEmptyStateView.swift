@@ -33,7 +33,7 @@ class GFEmptyStateView: UIImageView {
         messageLabel.numberOfLines = 3
         messageLabel.textColor     = .secondaryLabel
         
-        logoImageImageView.image   = UIImage(named: "empty-state-logo")
+        logoImageImageView.image   = Images.emptyStateLogo
         logoImageImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
