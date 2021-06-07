@@ -58,12 +58,7 @@ class GFUserInfoVC: UIViewController {
     }
     
     func addSubViews() {
-        view.addSubview(avatarImageView)
-        view.addSubview(userNameLabel)
-        view.addSubview(nameLabel)
-        view.addSubview(locationImageView)
-        view.addSubview(locationLabel)
-        view.addSubview(bioLabel)
+        view.addSubviews(avatarImageView, userNameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
     }
     
     func layoutUI() {
