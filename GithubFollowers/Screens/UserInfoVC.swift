@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol UserInfoVCDelegate {
+    func didRequestFollowers(for username: String)
+}
+
 class UserInfoVC: GFDataLoadingVC {
     
     
@@ -17,7 +21,7 @@ class UserInfoVC: GFDataLoadingVC {
     var itemViews: [UIView] = []
     
     var username: String!
-    var delegate: FollowerListVCDelegate!
+    var delegate: UserInfoVCDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
