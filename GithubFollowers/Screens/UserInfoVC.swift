@@ -48,7 +48,7 @@ class UserInfoVC: GFDataLoadingVC {
         
         NSLayoutConstraint.activate([
             contentView.widthAnchor.constraint(equalTo: scrollview.widthAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 2000)
+            contentView.heightAnchor.constraint(equalToConstant: 600)
         ])
     }
     
