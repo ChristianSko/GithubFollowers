@@ -48,7 +48,7 @@ class UserInfoVC: GFDataLoadingVC {
         
         NSLayoutConstraint.activate([
             contentView.widthAnchor.constraint(equalTo: scrollview.widthAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 600)
+            contentView.heightAnchor.constraint(equalToConstant: 2000)
         ])
     }
     
@@ -79,17 +79,17 @@ class UserInfoVC: GFDataLoadingVC {
         let itemHeight: CGFloat = 140
         
         for itemView in itemViews {
-            view.addSubview(itemView)
+            contentView.addSubview(itemView)
             itemView.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
-               itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-               itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
+               itemView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+               itemView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding)
             ])
         }
         
         NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
             headerView.heightAnchor.constraint(equalToConstant: 180),
             
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
