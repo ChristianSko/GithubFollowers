@@ -20,15 +20,15 @@ class GFSecondaryTitleLabel: UILabel {
     
     convenience init(fontsize: CGFloat) {
         self.init(frame: .zero)
-        font = UIFont.systemFont(ofSize: fontsize, weight: .medium)
+        font                                           = UIFont.systemFont(ofSize: fontsize, weight: .medium)
     }
     
     private func configure() {
-        textColor                   = .secondaryLabel
-        adjustsFontSizeToFitWidth   = true
-        minimumScaleFactor          = 0.90
-        lineBreakMode               = .byWordWrapping
-        translatesAutoresizingMaskIntoConstraints = false
+        textColor                                      = .secondaryLabel
+        adjustsFontSizeToFitWidth                      = true
+        minimumScaleFactor                             = 0.90
+        lineBreakMode                                  = .byWordWrapping
+        translatesAutoresizingMaskIntoConstraints      = false
     }
 
 }

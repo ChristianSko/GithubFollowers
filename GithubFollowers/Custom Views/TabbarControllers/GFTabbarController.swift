@@ -23,7 +23,6 @@ class GFTabbarController: UITabBarController {
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
         return UINavigationController(rootViewController: searchVC)
-        
     }
     
     
