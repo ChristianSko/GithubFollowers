@@ -29,6 +29,7 @@ class GFUserInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addSubViews()
         layoutUI()
         configureUIElements()
@@ -36,7 +37,7 @@ class GFUserInfoVC: UIViewController {
     
     
     func configureUIElements() {
-        downloadAvatarImage()
+        avatarImageView.downloadImage(fromURL: user.avatarUrl)
         userNameLabel.text          = user.login
         nameLabel.text              = user.name ?? ""
         locationLabel.text          = user.location ?? "No Location"
@@ -47,15 +48,7 @@ class GFUserInfoVC: UIViewController {
         locationImageView.tintColor = .secondaryLabel
     }
     
-    func downloadAvatarImage() {
-        NetworkManager.shared.downloadImage(from: user.avatarUrl){ [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.avatarImageView.image = image
-            }
-        }
-        
-    }
+    
     
     func addSubViews() {
         view.addSubviews(avatarImageView, userNameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
