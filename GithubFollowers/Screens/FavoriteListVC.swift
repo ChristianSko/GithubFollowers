@@ -38,7 +38,7 @@ class FavoriteListVC: GFDataLoadingVC {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.removeExcessCells()
-
+        
         tableView.register(FavoriteCell.self, forCellReuseIdentifier: FavoriteCell.reuseID)
     }
     
@@ -48,19 +48,23 @@ class FavoriteListVC: GFDataLoadingVC {
             guard let self = self else { return }
             switch result {
             case .success(let favorites):
-                if favorites.isEmpty {
-                    self.showEmptyStateView(with: "No Favorites? \nAdd one in the follower screen", in: self.view)
-                } else {
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
-                }
-                self.favorites = favorites
+                self.updateUI(with: favorites)
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
         }
+    }
+    
+    func updateUI(with favorites: [Follower]) {
+        if favorites.isEmpty {
+            self.showEmptyStateView(with: "No Favorites? \nAdd one in the follower screen", in: self.view)
+        } else {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.view.bringSubviewToFront(self.tableView)
+            }
+        }
+        self.favorites = favorites
     }
     
 }
@@ -81,7 +85,7 @@ extension FavoriteListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
         let destVC   = FollowerListVC(username: favorite.login)
- 
+        
         navigationController?.pushViewController(destVC, animated: true)
     }
     
